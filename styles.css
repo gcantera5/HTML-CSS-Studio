@@ -1,20 +1,78 @@
-#logoBar{
+#logoBar {
   width: 30vw;
   height: 100vh;
 }
-#siteLogo{
+
+#siteLogo {
   width: 100%;
 }
+
 body {
   display: flex;
+  background-color: #EBDEF0;
+  color: black;
 }
-#staffGallery{
-  width: 70vw;
-  display: inherit;
 
+#staffGallery {
+  width: 70vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
-.galleryImage{
+
+.galleryImage {
   width: 100%;
   height: auto;
-  height: 300px;
+  max-height: 300px;
+}
+
+.card {
+  position: relative;
+  background-color: #C39BD3;
+  margin: 1vmax;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  box-shadow: 0 0px 20px 0 rgba(0,0,0,0.4);
+}
+
+.characterName {
+  font-family: Lucida Handwriting, cursive;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.alt-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #logoBar {
+    width: 100%;
+    height: auto;
+  }
+
+  #siteLogo {
+    width: 50%;
+  }
+
+  #staffGallery {
+    width: 100vw;
+    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
